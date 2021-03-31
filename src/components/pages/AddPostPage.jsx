@@ -20,12 +20,15 @@ export default function AddPostPage({history}) {
   };
   
   return (
-    <div className='addpost-block block'>
-      <Link to='/'>
-        <span className="material-icons addpost-close">close</span>
-      </Link>
-      <textarea className='addpost-textarea' rows="5" onChange={handleTextChange} value={newPostText}></textarea>
-      <div className='btn' onClick={postNewPost}>Отправить</div>
-    </div>
+    <>
+      <div className='title'>Новая записть</div>
+      <div className='addpost-block block'>
+        <Link to='/'>
+          <span className="material-icons addpost-close">close</span>
+        </Link>
+        <textarea className='addpost-textarea' rows="5" onChange={handleTextChange} value={newPostText}></textarea>
+        <div className='btn' onClick={postNewPost}>Отправить</div>
+      </div>
+    </>
   );
 }
